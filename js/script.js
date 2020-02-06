@@ -4,7 +4,7 @@
 
 
     var sections = $('.section'),
-        nav = $('#navbar'),
+        nav = $('#navbar_developer'),
         nav_height = nav.outerHeight();
 
     function activeMenuItem() {
@@ -14,7 +14,6 @@
                 bottom = top + $(this).outerHeight();
 
             if (cur_pos >= top && cur_pos <= bottom) {
-                nav.find('ul > li > a').parent().removeClass('active');
                 nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('active');
             } else if (cur_pos == 2) {
                 nav.find('ul > li > a').parent().removeClass('active');
